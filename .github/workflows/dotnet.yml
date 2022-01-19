@@ -16,10 +16,16 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
+        dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore src/OpenWeather/OpenWeather.sln
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore src/OpenWeather/OpenWeather.sln
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal src/OpenWeather/OpenWeather.sln
+    - name: Pack
+      run: dotnet pack --configuration Release src/OpenWeather/OpenWeather.sln
+    - name: Publish NuGet (github)
+      run: | 
+        dotnet nuget add source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" --name github --username ${{ github.repository_owner }} --password ${{ github.token }} --store-password-in-clear-text
+        dotnet nuget push "src/OpenWeather/OpenWeather/bin/Release/Gh0stC0de.OpenWeather.*.nupkg" --source "github"

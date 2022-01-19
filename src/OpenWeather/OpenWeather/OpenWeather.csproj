@@ -1,9 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<PackageId>Gh0stC0de.OpenWeather</PackageId>
+	<Version>0.0.1</Version>
+	<Authors>Gh0stC0de</Authors>
+	<Description>A .NET SDK for the OpenWeather API.</Description>
+	<RepositoryUrl>https://github.com/Gh0stC0de/OpenWeather</RepositoryUrl>
+	<RespositoryType>git</RespositoryType>
+	<PackageTags>OpenWeather;OpenWeatherMap;weather;onecall</PackageTags>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<Copyright>Copyright (c) Gh0stC0de 2022</Copyright>
+	<PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+  	<None Include="..\..\..\images\icon.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 
 </Project>
