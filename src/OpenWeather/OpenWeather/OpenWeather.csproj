@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackageId>Gh0stC0de.OpenWeather</PackageId>
-		<Version>0.0.1</Version>
+		<Version>0.0.2</Version>
 		<Authors>Gh0stC0de</Authors>
 		<Description>A .NET SDK for the OpenWeather API.</Description>
 		<RepositoryUrl>https://github.com/Gh0stC0de/OpenWeather</RepositoryUrl>

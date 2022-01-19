@@ -24,7 +24,7 @@ namespace OpenWeather.Services.Implementations
         /// <inheritdoc/>
         public async Task<OneCallResponse> GetOneCallResponse(double latitude, double longitude)
         {
-            string requestUri = $"onecall?lat={latitude}&lon={longitude}&{GetParametersFromSettings}";           
+            string requestUri = $"onecall?lat={latitude}&lon={longitude}&{GetParametersFromSettings()}";           
 
             OneCallResponse? oneCallResponse;
             try
