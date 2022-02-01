@@ -11,4 +11,4 @@ OneCallResponse response = await service.GetOneCallResponse(47.37174, 8.54226);
 ```
 
 ## Limitations
-The function is currently limited to the OneCall API only. If any other features are requesteddo not mind opening an issue.
+The functionality is currently limited to the OneCall API only. If other features are requested do not mind opening an issue.
